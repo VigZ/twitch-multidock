@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import logo from './logo.svg';
 import './App.css';
 import StreamDock from './components/StreamDock'
 import StreamData from './components/StreamData'
 import FollowingBar from './components/FollowingBar'
+import Search from './components/Search'
 
 class App extends Component {
-  componentDidMount = () => {
-
-  }
 
   render() {
     return (
@@ -20,10 +19,10 @@ class App extends Component {
             <StreamData/>
           </div>
         </div>
-</div>
+        </div>
 
     );
   }
 }
-const mapStateToProps = (state) => ({ username: state.userReducer.username, id: state.userReducer.id, profileImage: state.userReducer.profileImage })
-export default withRouter(connect(mapStateToProps, {verifyUser})(App))
+const mapStateToProps = (state) => ({})
+export default connect(mapStateToProps, {})(App)

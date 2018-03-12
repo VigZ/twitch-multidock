@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import StreamEmbed from './StreamEmbed'
 import Search from './Search'
+import {fetchStreamInfo} from '../actions/streams'
 
 
 class StreamDock extends Component {
@@ -8,13 +10,12 @@ class StreamDock extends Component {
   render() {
     return (
       <div class="main">
-      <StreamEmbed channel="fuslie" height="300" width="400" handleId=".handle1"/>
-      <StreamEmbed channel="iwilldominate" height="200" width="100" handleId=".handle2"/>
+      <Search fetchStreamInfo={this.props.fetchStreamInfo}/>
 
       </div>
 
     );
   }
 }
-
-export default StreamDock;
+const mapStateToProps = (state) => ({activeStreams: state.streamsReducer.activeStreams})
+export default connect(mapStateToProps,{fetchStreamInfo})(StreamDock);
