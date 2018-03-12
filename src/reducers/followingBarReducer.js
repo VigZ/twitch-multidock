@@ -3,7 +3,7 @@ export default function followingBarReducer(state = { focusedStream:null }, acti
     case "ADD_FOCUSED_STREAM":
       return {...state, focusedStream: action.payload}
     case "REMOVE_FOCUSED_STREAM":
-      return {...state, focusedStream:{}}
+      return {...state, focusedStream:null}
     default:
       return state
   }

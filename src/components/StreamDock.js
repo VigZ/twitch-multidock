@@ -7,11 +7,23 @@ import {fetchStreamInfo} from '../actions/streams'
 
 class StreamDock extends Component {
 
+  createEmbed = (streamData) => {
+    if (streamData){
+     return  <StreamEmbed channel={streamData.login} height='300' width='400' handleId='.handleId'/>
+   }
+  }
+
+  createEmbeds = (streams) => {
+    if (streams){
+    return streams.map((stream) => this.createEmbed(stream));
+    }
+  }
+
   render() {
     return (
       <div class="main">
       <Search fetchStreamInfo={this.props.fetchStreamInfo}/>
-
+       {this.createEmbeds(this.props.activeStreams)}
       </div>
 
     );

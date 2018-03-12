@@ -3,7 +3,7 @@ export default function streamsReducer(state = { activeStreams: [] }, action) {
     case "ADD_ACTIVE_STREAM":
       return {...state, activeStreams: [...state.activeStreams, action.payload.data[0]]}
     case "DELETE_ACTIVE_STREAM":
-      return {...state.activeStreams.filter(({ id }) => id !== action.payload.id)}
+      return {...state, activeStreams: [...state.activeStreams.filter((stream) => stream.id !== action.payload.id)]}
     case "MODIFY_ACTIVE_STREAM":
       return {...state, currentlyViewingData: action.payload}
     case "LIST_STREAMS":

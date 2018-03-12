@@ -54,8 +54,7 @@ body{
 .main{
   flex: 1;
   order: 2;
-  background: #BB8FCE;
-  justify-content: center;
+  background: #BB8FCE;;
 }
 .sidebar-first{
   width: 15%;

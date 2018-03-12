@@ -27,3 +27,16 @@ export function setFocus(stream){
 }
 
 }
+
+export function deleteActiveStream(streamData){
+  return{
+    type: "DELETE_ACTIVE_STREAM",
+    payload: streamData
+  }
+}
+
+export function resetFocus(){
+  return{
+    type: "REMOVE_FOCUSED_STREAM"
+  }
+}

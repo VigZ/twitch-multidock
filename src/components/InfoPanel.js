@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class InfoPanel extends Component {
-
-  render() {
+const InfoPanel = (props) => {
+  if (props.focusedStream){
     return (
-        <div class="sidebar-first">Sidebar first: Fixed width</div>
+        <div>
+        <img src={props.focusedStream.profile_image_url} height='200' width='200'/>
+        {props.focusedStream.login}
+        {props.focusedStream.description}
+        {props.focusedStream.viewCount}
+        </div>
 
     );
   }
+  else{
+    return (
+      <div>
+      </div>
+    )
+  }
 }
 
-export default FollowingBar;
+export default InfoPanel;
