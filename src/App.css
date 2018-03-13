@@ -30,6 +30,10 @@
 body{
   margin: 0;
 }
+
+img {
+   border:1px solid #021a40;
+}
 .wrapper{
   min-height: 100vh;
   background: #ccc;
@@ -76,21 +80,6 @@ form{
 	width:500px;
 	margin:0 auto;
 }
-.search {
-	padding:6px 15px 6px 30px;
-	margin:3px;
-
-}
-
-.rounded {
-	border-radius:15px;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-}
-
-input[type=text]{
-	color:#616A6B;
-}
 
 input:focus,
 select:focus,
@@ -98,17 +87,37 @@ textarea:focus,
 button:focus {
     outline: none;
 }
-input[type=button], input[type=button]:hover {
-	position:relative;
-	border:1px solid #adc5cf;
-	background: #e4f1f9; /* Old browsers */
-	background: -moz-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f1f9), color-stop(100%,#d5e7f3)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* IE10+ */
-	background: linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f9', endColorstr='#d5e7f3',GradientType=0 ); /* IE6-9 */
-	color:#7da2aa;
-	cursor: pointer;
+
+.searchContainer{
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  padding-top: 150px;
+}
+
+.searchContainer input:hover, .searchContainer input:focus, .searchContainer input:active{
+    outline:none;
+    background: #ffffff;
+  }
+
+.searchContainer input{
+  width: 300px;
+  height: 50px;
+  background: #A569BD;
+  border-width: 1px;
+  border-color: black;
+  font-size: 10pt;
+  opacity: .4;
+  color: #BB8FCE;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  margin : 0 auto;
+  -webkit-transition: background .55s ease;
+-moz-transition: background .55s ease;
+-ms-transition: background .55s ease;
+-o-transition: background .55s ease;
+transition: background .55s ease;
 }

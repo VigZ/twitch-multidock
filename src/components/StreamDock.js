@@ -9,7 +9,7 @@ class StreamDock extends Component {
 
   createEmbed = (streamData) => {
     if (streamData){
-     return  <StreamEmbed channel={streamData.login} height='300' width='400' handleId='.handleId'/>
+     return  <StreamEmbed channel={streamData.login} height='400' width='400' handleId='.handleId'/>
    }
   }
 

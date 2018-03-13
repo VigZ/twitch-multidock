@@ -13,8 +13,14 @@ class StreamData extends Component {
 
     const activeStreams = this.props.activeStreams.map((stream) => <StreamItem streamData={stream} setFocus={this.props.setFocus}/>)
     return (
-        <div class="sidebar-second">Sidebar second: Fixed width
-        {activeStreams}
+        <div class="sidebar-second">
+          <div>
+          <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/256/twitch-256-black.png" style={{border:"none"}}/>
+            <div>
+
+            </div>
+          </div>
+          {activeStreams}
         </div>
 
     );
