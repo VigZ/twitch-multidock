@@ -29,11 +29,16 @@
 
 body{
   margin: 0;
+  font-family: 'Space Mono', monospace;
 }
 
 img {
    border:1px solid #021a40;
 }
+.grow { transition: all .2s ease-in-out; }
+
+.grow:hover { transform: scale(1.1); }
+
 .wrapper{
   min-height: 100vh;
   background: #ccc;
@@ -59,6 +64,7 @@ img {
   flex: 1;
   order: 2;
   background: #BB8FCE;;
+  overflow-y: scroll;
 }
 .sidebar-first{
   width: 15%;
@@ -71,8 +77,8 @@ img {
   order: 3;
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
   align-items: center;
-  overflow-y: scroll;
   background: #A569BD  ;
 }
 
@@ -95,10 +101,12 @@ button:focus {
   padding-top: 150px;
 }
 
-.searchContainer input:hover, .searchContainer input:focus, .searchContainer input:active{
-    outline:none;
-    background: #ffffff;
+
+  .title {
+    font-size: 2em;
+    font-style: italic;
   }
+
 
 .searchContainer input{
   width: 300px;
@@ -108,7 +116,7 @@ button:focus {
   border-color: black;
   font-size: 10pt;
   opacity: .4;
-  color: #BB8FCE;
+  color: #000000;
   padding-left: 45px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -121,3 +129,8 @@ button:focus {
 -o-transition: background .55s ease;
 transition: background .55s ease;
 }
+
+.searchContainer input:hover, .searchContainer input:focus, .searchContainer input:active{
+    outline:none;
+    background: #ffffff;
+  }

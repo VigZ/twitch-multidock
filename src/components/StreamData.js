@@ -15,10 +15,7 @@ class StreamData extends Component {
     return (
         <div class="sidebar-second">
           <div>
-          <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/256/twitch-256-black.png" style={{border:"none"}}/>
-            <div>
-
-            </div>
+            <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/256/twitch-256-black.png" style={{border:"none"}}/>
           </div>
           {activeStreams}
         </div>

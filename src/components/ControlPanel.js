@@ -10,8 +10,8 @@ class ControlPanel extends Component {
   render() {
     if(this.props.focusedStream){
     return (
-        <div onClick={this.handleClick}>
-        Delete Me
+        <div onClick={this.handleClick} className="grow" style={{display:"block", textAlign:"center",  border: '1px solid black', marginTop:"20px"}}>
+          Delete Me
         </div>
 
       );

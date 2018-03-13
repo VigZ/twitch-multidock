@@ -11,9 +11,11 @@ class StreamItem extends Component {
   render(){
     if(this.props.streamData){
   return (
-    <div onClick={this.handleClick}>
-    {this.props.streamData.login}
-    <img src={this.props.streamData.profile_image_url} height='100' width='100'/>
+    <div onClick={this.handleClick} className="grow">
+      <img src={this.props.streamData.profile_image_url} height='100' width='100'/>
+      <div style={{display:"block", textAlign:"center",  border: '1px solid black', marginBottom:"10px"}}>
+        {this.props.streamData.login}
+      </div>
     </div>
       )
     }

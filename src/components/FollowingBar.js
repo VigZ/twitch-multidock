@@ -10,8 +10,8 @@ class FollowingBar extends Component {
   render() {
     return (
         <div class="sidebar-first">
-        <InfoPanel focusedStream={this.props.focusedStream}/>
-        <ControlPanel focusedStream={this.props.focusedStream} deleteActiveStream={this.props.deleteActiveStream} resetFocus={this.props.resetFocus}/>
+          <InfoPanel focusedStream={this.props.focusedStream}/>
+          <ControlPanel focusedStream={this.props.focusedStream} deleteActiveStream={this.props.deleteActiveStream} resetFocus={this.props.resetFocus}/>
         </div>
 
     );
