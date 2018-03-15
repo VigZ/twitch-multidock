@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import InfoPanel from './InfoPanel';
 import ControlPanel from './ControlPanel';
-import { connect } from 'react-redux';
 import {deleteActiveStream, resetFocus } from '../actions/streams';
 
 

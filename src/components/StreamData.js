@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import StreamItem from './StreamItem'
 import {setFocus} from '../actions/streams'
 
